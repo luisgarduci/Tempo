@@ -23,7 +23,14 @@ async function ShowContent(consulta) {
   let codigo = data['weather'][0]['icon'];
   let codigoBandeira = data['sys']['country'];
   let retornoTemperatura = data['main']['temp'];
-  let graus = retornoTemperatura.toString().substring(0, 2)
+  let graus = null;
+  if (retornoTemperatura < 10) {
+    graus = retornoTemperatura.toString().substring(0, 1)
+  }
+  else {
+    graus = retornoTemperatura.toString().substring(0, 2)
+  }
+  //graus = retornoTemperatura.toString().substring(0, 2)
   tituloDescricao.innerHTML = data['weather'][0]['description'];
   cidade.innerHTML = data['name'];
   bandeira.src = `https://flagsapi.com/${codigoBandeira}/flat/64.png`;
