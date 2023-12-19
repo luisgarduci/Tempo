@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, blue, white);
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form > input {
+            padding: 8px;
+            width: 200px;
+            box-shadow: 3px 3px 3px black;
+            border-radius: 5px;
+        }
+
+        main > #conteudo {
+          width: 450px;
+          box-shadow: 1px 1px 4px black;
+          border-radius: 5px;
+          height: 420px;
+          background-color: rgba(47, 47, 182, 0.774);
+        }
+
+        main > #conteudo > img {
+            object-fit: cover;
+        }
+
+        main > #conteudo > #tempoInformacoes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            
+        }
+
+        main > #conteudo > #localizacao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            gap: 125px;
+            color: white;
+            font-size: 17px;
+            margin: 12px 0px 12px 0px;
+        }
+
+        main > #conteudo > #tempoInformacoes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+            color: white;
+        }
+
+        main > #conteudo > #tempoInformacoes > #imagemTempo {
+          height: 100px;
+          width: 100px;
+        }
+
+        main > #conteudo > #informacoesAdicionais {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            color: white;
+        }
+
+        main > #conteudo > #informacoesAdicionais > hr {
+          -webkit-transform: rotate(90deg);
+          width: 50px;
+          padding: 1px;
+          background-color: white;
+        }
+
+        main > #conteudo > #informacoesAdicionais > #container-umidade {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main > #conteudo > #informacoesAdicionais > #container-vento {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main > #conteudo > #informacoesAdicionais > #container-umidade > #imgUmidade {
+            height: 40px;
+        }
+
+        main > #conteudo > #informacoesAdicionais > #container-vento > #imgVento {
+            height: 40px;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Previsão do Tempo</h1>
+        <form action="" id="form">
+            <input type="search" name="" id="pesquisa" value="Londres">
+        </form>
+        <section id="conteudo">
+            <div id="localizacao">
+             <p id="cidade"></p> <img src="#" alt="" id="bandeira">
+            </div>
+         <div id="tempoInformacoes" class="containers">
+           <img src="" alt="" id="imagemTempo">
+           <h3 id="tituloDescricao"></h3>
+           <p id="paragrafoGraus"></p>
+         </div>
+         <hr>
+         <div id="informacoesAdicionais">
+         <div id="container-umidade">
+            <img src="umidade.png" alt="" id="imgUmidade"> <p id="umidade"></p>
+         </div>
+         <hr>
+         <div id="container-vento">
+            <img src="vento.png" alt="" id="imgVento"> <p id="vento"></p>
+         </div>
+         
+         </div>
+         
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
