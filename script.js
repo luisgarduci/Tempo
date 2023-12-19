@@ -24,7 +24,7 @@ async function ShowContent(consulta) {
   let codigoBandeira = data['sys']['country'];
   let retornoTemperatura = data['main']['temp'];
   let graus = null;
-  if (retornoTemperatura < 10) {
+  if (retornoTemperatura >= 0 && retornoTemperatura < 10) {
     graus = retornoTemperatura.toString().substring(0, 1)
   }
   else {
